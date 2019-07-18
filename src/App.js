@@ -1,23 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './bitcoin.svg';    //source->https://www.flaticon.com/free-icon/bitcoin-mechanic-symbol_36592
 import './App.css';
+import { Offline, Online } from "react-detect-offline";
+import Btc from './Btc/Btc'
 
 function App() {
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+          Real Time BTC tracker from blockchain.info
+        </p>    
+        <div>
+          You are <Online>online</Online><Offline>offline</Offline>
+       </div>
+       <Btc />
       </header>
     </div>
   );
